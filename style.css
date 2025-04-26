@@ -1,28 +1,31 @@
-/* Import Open Sans font */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
 body {
-  font-family: 'Open Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #E7ECEF; /* Light background */
-  color: #274C77; /* Dark blue text for readability */
-}
-
-header {
-    background-color: #274C77;
-    color: #E7ECEF;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between; /* Title on the left, nav on the right */
-    align-items: center; /* Vertical center alignment */
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E7ECEF; /* Light background */
+    color: #274C77; /* Dark blue text for readability */
+  }
+  
+  header {
+      background-color: #274C77;
+      color: #E7ECEF;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between; /* Title on the left, nav on the right */
+      align-items: center; /* Vertical center alignment */
+      position: relative; /* Allow absolute positioning inside */
   }
   
   #logo {
-    scale: 3;
-    margin-left: auto;
+      position: absolute; /* Remove from flow and place in top-left */
+      top: 20px; /* Space from the top */
+      left: 20px; /* Space from the left */
   }
-
+  
+  h1 {
+    margin-left: 80px; /* Adjust title to the right, after logo */
+  }
+  
   nav {
     display: flex;
     gap: 20px; /* Space between links */
@@ -38,35 +41,35 @@ header {
   nav a:hover {
     color: #6096BA;
   }
-
-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #A3CEF1; /* Soft background for sections */
-  margin: 20px;
-  border-radius: 8px;
-}
-
-button {
-  background-color: #6096BA; /* Middle blue for buttons */
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  margin-top: 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #274C77; /* Dark blue on hover */
-}
-
-footer {
-  background-color: #274C77;
-  color: #E7ECEF;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
+  
+  section {
+    padding: 50px;
+    text-align: center;
+    background-color: #A3CEF1; /* Soft background for sections */
+    margin: 20px;
+    border-radius: 8px;
+  }
+  
+  button {
+    background-color: #6096BA; /* Middle blue for buttons */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #274C77; /* Dark blue on hover */
+  }
+  
+  footer {
+    background-color: #274C77;
+    color: #E7ECEF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
