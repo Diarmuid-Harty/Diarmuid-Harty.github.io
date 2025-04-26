@@ -8,7 +8,7 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #E7ECEF; /* Light background color */
     color: #333;
   }
   
@@ -34,7 +34,7 @@
     display: flex;
     justify-content: space-between;
     padding: 20px;
-    background-color: #333;
+    background-color: #274C77; /* Dark Blue */
     color: #fff;
   }
   
@@ -53,12 +53,12 @@
   }
   
   .navbar ul li a:hover {
-    color: #ff6347;
+    color: #A3CEF1; /* Light Blue */
   }
   
   /* Hero section */
   .hero {
-    background-color: #333;
+    background-color: #6096BA; /* Medium Blue */
     color: #fff;
     text-align: center;
     padding: 80px 20px;
@@ -76,7 +76,7 @@
   
   .cta-button {
     padding: 15px 30px;
-    background-color: #ff6347;
+    background-color: #A3CEF1; /* Light Blue */
     color: #fff;
     border-radius: 25px;
     font-size: 18px;
@@ -86,7 +86,7 @@
   }
   
   .cta-button:hover {
-    background-color: #e5533c;
+    background-color: #6096BA; /* Medium Blue */
   }
   
   /* Features section */
@@ -99,6 +99,7 @@
   .features h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    color: #274C77; /* Dark Blue */
   }
   
   .feature-cards {
@@ -117,6 +118,7 @@
   .feature-card h3 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #274C77; /* Dark Blue */
   }
   
   .feature-card p {
@@ -133,6 +135,7 @@
   .about h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #274C77; /* Dark Blue */
   }
   
   .about p {
@@ -150,6 +153,7 @@
   .contact h2 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #274C77; /* Dark Blue */
   }
   
   .contact p {
@@ -161,16 +165,16 @@
     display: inline-block;
     margin: 0 15px;
     font-size: 20px;
-    color: #333;
+    color: #274C77; /* Dark Blue */
   }
   
   .social-links a:hover {
-    color: #ff6347;
+    color: #A3CEF1; /* Light Blue */
   }
   
   /* Sign up section */
   .sign-up {
-    background-color: #333;
+    background-color: #274C77; /* Dark Blue */
     color: #fff;
     padding: 60px 20px;
     text-align: center;
@@ -187,7 +191,7 @@
   }
   
   footer {
-    background-color: #333;
+    background-color: #274C77; /* Dark Blue */
     color: #fff;
     padding: 20px;
     text-align: center;
