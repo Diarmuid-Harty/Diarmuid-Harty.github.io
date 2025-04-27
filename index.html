@@ -26,11 +26,13 @@
 </head>
 <body class="font-open-sans bg-[var(--background)] text-[var(--primary-dark)]">
     <!-- Header -->
-  <header class="bg-white shadow-sm fixed w-full z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <h1 class="ml-3 text-2xl font-bold text-[var(--primary-dark)]">Classmates</h1>
-      </div>
+    <header class="bg-white shadow-sm fixed w-full z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        <!-- This div can now be empty, just take up space -->
+        <div class="flex-grow">
+          <!-- No logo, just the H1 -->
+          <h1 class="ml-0 text-2xl font-bold text-[var(--primary-dark)]">Classmates</h1>
+        </div>
       <nav class="hidden md:flex items-center space-x-8">
         <a href="#features" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">Features</a>
         <a href="#about" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">About</a>
