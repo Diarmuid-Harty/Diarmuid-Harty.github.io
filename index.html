@@ -3,75 +3,142 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Classmates - Connect & Collaborate</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <title>Classmates - Your Student Productivity Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-dark: #274C77; /* Dark blue */
+      --primary-mid: #6096BA; /* Middle blue */
+      --primary-light: #A3CEF1; /* Light blue */
+      --background: #E7ECEF; /* Light background */
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <a href="#" class="logo">
-            <img id="logo" src="images/Classmates__1_-removebg-preview.png" alt="ClassMates Logo" height="50">
-          </a>
-        <h1>ClassMates</h1>
-        <nav>
-            <a href="#">Home</a> |
-            <a href="#">Features</a> |
-            <a href="#">About</a> |
-            <a href="#">Sign Up</a>
-        </nav>
-    </header>
+<body class="font-inter bg-[var(--background)] text-[var(--primary-dark)]">
+  <!-- Header -->
+  <header class="bg-white shadow-sm fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="images/Classmates__1_-removebg-preview.png" alt="Classmates Logo" class="h-10">
+        <h1 class="ml-3 text-2xl font-bold text-[var(--primary-dark)]">Classmates</h1>
+      </div>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#features" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">Features</a>
+        <a href="#about" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">About</a>
+        <a href="#sign-up" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">Sign Up</a>
+      </nav>
+      <button class="md:hidden" onclick="toggleMenu()">
+        <svg class="w-6 h-6 text-[var(--primary-dark)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-sm">
+      <a href="#features" class="block px-4 py-2 text-[var(--primary-dark)] hover:bg-[var(--primary-light)]">Features</a>
+      <a href="#about" class="block px-4 py-2 text-[var(--primary-dark)] hover:bg-[var(--primary-light)]">About</a>
+      <a href="#sign-up" class="block px-4 py-2 text-[var(--primary-dark)] hover:bg-[var(--primary-light)]">Sign Up</a>
+    </div>
+  </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>Welcome to Classmates</h2>
-      <p>Your platform to connect, collaborate, and thrive in your academic journey.</p>
-      <a href="#sign-up" class="cta-button">Get Started</a>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary-mid)] text-white pt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-4xl sm:text-5xl font-bold mb-6 fade-in">Your All-in-One Student Hub</h2>
+      <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto fade-in">Classmates helps you stay organized, connect with peers, and thrive academically—all for free.</p>
+      <a href="#sign-up" class="inline-block bg-white text-[var(--primary-dark)] font-semibold px-8 py-3 rounded-full hover:bg-[var(--primary-light)] transition fade-in">Get Started Free</a>
     </div>
   </section>
 
-  <section id="features" class="features">
-    <h2>Features</h2>
-    <div class="feature-cards">
-      <div class="feature-card">
-        <h3>Community Interaction</h3>
-        <p>Join study groups, discussions, and connect with peers.</p>
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold text-center mb-12 text-[var(--primary-dark)] fade-in">Everything You Need to Succeed</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 bg-[var(--background)] rounded-lg shadow-sm hover:shadow-md transition fade-in">
+          <h3 class="text-xl font-semibold mb-4 text-[var(--primary-dark)]">Stay Organized</h3>
+          <p class="text-[var(--primary-dark)]">Manage tasks, deadlines, and notes with calendars, to-do lists, and reminders.</p>
+        </div>
+        <div class="p-6 bg-[var(--background)] rounded-lg shadow-sm hover:shadow-md transition fade-in">
+          <h3 class="text-xl font-semibold mb-4 text-[var(--primary-dark)]">Collaborate Easily</h3>
+          <p class="text-[var(--primary-dark)]">Join study groups, chat with peers, and work on group projects seamlessly.</p>
+        </div>
+        <div class="p-6 bg-[var(--background)] rounded-lg shadow-sm hover:shadow-md transition fade-in">
+          <h3 class="text-xl font-semibold mb-4 text-[var(--primary-dark)]">Boost Well-Being</h3>
+          <p class="text-[var(--primary-dark)]">Get break reminders, motivational quotes, and mindfulness tips to stay balanced.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <h3>Secure & Private</h3>
-        <p>We value your privacy and ensure your data is protected.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Smart Resources</h3>
-        <p>Access study materials, tools, and helpful resources for your courses.</p>
+      <div class="mt-12 text-center fade-in">
+        <p class="text-lg text-[var(--primary-dark)] mb-4">Plus, access student discounts, campus maps, and AI-powered study tools!</p>
+        <a href="#sign-up" class="inline-block bg-[var(--primary-dark)] text-white font-semibold px-6 py-2 rounded-full hover:bg-[var(--primary-mid)] transition">Explore All Features</a>
       </div>
     </div>
   </section>
 
-  <section id="about" class="about">
-    <h2>About Classmates</h2>
-    <p>Classmates is an innovative platform designed to help students connect with each other, collaborate on projects, and access resources that enhance their academic experience. Whether you're a student looking to join study groups or seeking academic help, we've got you covered!</p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Connect With Us</h2>
-    <p>Follow us on social media:</p>
-    <div class="social-links">
-      <a href="https://x.com/Classmates84846" target="_blank">X</a>
-      <a href="https://www.instagram.com/class_mates_2025_/" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@classmates_2025" target="_blank">TikTok</a>
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-[var(--background)]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6 text-[var(--primary-dark)] fade-in">Why Classmates?</h2>
+      <p class="text-lg text-[var(--primary-dark)] max-w-3xl mx-auto fade-in">Built by students for students, Classmates is trusted by universities like SETU, UCC, MTU, and UL. Our free app combines productivity, collaboration, and well-being tools to help you thrive. With top-tier data privacy and eco-friendly development, we’re here to support your academic journey.</p>
+      <div class="mt-8 flex justify-center space-x-4 fade-in">
+        <img src="https://via.placeholder.com/50?text=SETU" alt="SETU Logo" class="h-12">
+        <img src="https://via.placeholder.com/50?text=UCC" alt="UCC Logo" class="h-12">
+        <img src="https://via.placeholder.com/50?text=MTU" alt="MTU Logo" class="h-12">
+        <img src="https://via.placeholder.com/50?text=UL" alt="UL Logo" class="h-12">
+      </div>
     </div>
   </section>
 
-  <section id="sign-up" class="sign-up">
-    <h2>Sign Up</h2>
-    <p>Join thousands of students today! Sign up to start connecting with your peers.</p>
-    <a href="#" class="cta-button">Sign Up Now</a>
+  <!-- Sign-Up Section -->
+  <section id="sign-up" class="py-20 bg-[var(--primary-dark)] text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold mb-6 fade-in">Join Thousands of Students</h2>
+      <p class="text-lg mb-8 max-w-2xl mx-auto fade-in">Sign up for free to organize your studies, connect with peers, and unlock exclusive student discounts. Premium features available for extra support.</p>
+      <a href="#" class="inline-block bg-white text-[var(--primary-dark)] font-semibold px-8 py-3 rounded-full hover:bg-[var(--primary-light)] transition fade-in">Sign Up Free</a>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Classmates. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-[var(--primary-dark)] text-white py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p>© 2025 Classmates. All Rights Reserved.</p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="https://x.com/Classmates84846" target="_blank" class="hover:text-[var(--primary-light)] transition">X</a>
+          <a href="https://www.instagram.com/class_mates_2025_/" target="_blank" class="hover:text-[var(--primary-light)] transition">Instagram</a>
+          <a href="https://www.tiktok.com/@classmates_2025" target="_blank" class="hover:text-[var(--primary-light)] transition">TikTok</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Fade-in animations on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      elements.forEach(element => observer.observe(element));
+    });
+  </script>
 </body>
 </html>
