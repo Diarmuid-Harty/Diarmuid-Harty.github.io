@@ -15,6 +15,7 @@
       --primary-mid: #6096BA; /* Middle blue */
       --primary-light: #A3CEF1; /* Light blue */
       --background: #E7ECEF; /* Light background */
+      --dark: #ffffff;
     }
     .fade-in {
       opacity: 0;
@@ -31,17 +32,17 @@
     <!-- Header -->
     <header class="bg-white shadow-sm fixed w-full z-10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <!-- Logo directly inside the flex container without flex-grow -->
-        <a href="#top" class="flex-shrink-0">
+        <a href="#top" class="flex items-center space-x-2">
+          <!-- Heading -->
           <h1 class="text-2xl font-bold text-[var(--primary-dark)]">Classmates</h1>
         </a>
     
         <!-- Navigation links -->
-        <nav class="hidden md:flex items-center space-x-8">
+        <nav class="hidden md:flex items-center space-x-8 flex-grow justify-end">
           <a href="#features" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">Features</a>
           <a href="#about" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">About</a>
           <a href="#sign-up" class="text-[var(--primary-dark)] hover:text-[var(--primary-mid)] transition">Sign Up</a>
-          
+    
           <!-- Social Icons -->
           <div class="flex space-x-4 ml-6">
             <a href="https://x.com/Classmates84846" target="_blank" class="hover:text-[var(--primary-mid)] transition">
@@ -80,13 +81,16 @@
     
 
   <!-- Hero Section -->
-  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary-mid)] text-white pt-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="text-4xl sm:text-5xl font-bold mb-6 fade-in">Your All-in-One Student Hub</h2>
-      <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto fade-in">Classmates helps you stay organized, connect with peers, and thrive academically—all for free.</p>
-      <a href="#features" class="inline-block bg-white text-[var(--primary-dark)] font-semibold px-8 py-3 rounded-full hover:bg-[var(--primary-light)] transition fade-in">Get Started Free</a>
-    </div>
-  </section>
+<section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-[var(--primary-dark)] to-[var(--primary-mid)] text-white pt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Title and Description -->
+    <h2 class="text-4xl sm:text-5xl font-bold mb-6 fade-in">Your All-in-One Student Hub</h2>
+    <p class="text-lg sm:text-xl mb-8 max-w-2xl mx-auto fade-in">Classmates helps you stay organized, connect with peers, and thrive academically—all for free.</p>
+    <a href="#features" class="inline-block bg-white text-[var(--primary-dark)] font-semibold px-8 py-3 rounded-full hover:bg-[var(--primary-light)] transition fade-in">Get Started Free</a>
+  </div>
+</section>
+
+
 
   <!-- Features Section -->
   <section id="features" class="py-20 bg-white">
